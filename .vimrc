@@ -14,6 +14,12 @@ set autoread                    "Reload files changed outside vim
 " ================ Map keys ====================
 " Show last files open/edit
 :map <F2> :MRU<CR>
+
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
+" Custom keys
 :map sd i
 :map se s
 
@@ -28,13 +34,11 @@ set background=dark
 colorscheme solarized
 
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowb
 
 " ================ Persistent Undo ==================
-
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 if has('persistent_undo')
@@ -53,10 +57,6 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -83,6 +83,8 @@ Plug 'vim-scripts/mru.vim'
 " Thema vim
 Plug 'altercation/vim-colors-solarized'
 
+" surround tags (' ")
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
