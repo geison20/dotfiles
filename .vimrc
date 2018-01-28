@@ -23,6 +23,10 @@ nnoremap P P=`]<C-o>
 :map sd i
 :map se s
 
+" tab switch
+:map <C-l> gt
+:map <C-h> gT
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
